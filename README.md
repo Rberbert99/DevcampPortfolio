@@ -7,13 +7,13 @@
 - Real Time chat engine for comments
 - Blog
 - Portfolio
-_ Drag and drop interface
+- Drag and drop interface
 
 ### Code Example
 
 ```Ruby
-def my_great method
- puts "Here it is"
+def my_great_method
+  puts "Here it is"
 end
 ```
 
