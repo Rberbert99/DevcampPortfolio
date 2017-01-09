@@ -1,0 +1,2 @@
+class Ortfolio < ApplicationRecord
+end

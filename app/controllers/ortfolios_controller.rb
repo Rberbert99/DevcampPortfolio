@@ -1,0 +1,2 @@
+class OrtfoliosController < ApplicationController
+end
