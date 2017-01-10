@@ -1,6 +1,5 @@
 Rails.application.routes.draw do
   resources :portfolios
-  resources :ortfolios
   get 'pages/home'
 
   get 'pages/about'
