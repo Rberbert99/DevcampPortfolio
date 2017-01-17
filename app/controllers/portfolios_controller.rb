@@ -49,7 +49,7 @@ class PortfoliosController < ApplicationController
 
   def destroy
     @portfolio_item = Portfolio.find(params[:id])
-    @portfolio_items.destroy
+    @portfolio_item.destroy
     redirect_to portfolios_path
   end
 
