@@ -6,7 +6,7 @@
     
     <meta name = "keywords" content="<%= @seo_keywords %>" />
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag    'blogs', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
@@ -14,8 +14,6 @@
   
 <p class="notice"><%= notice %></p>
 <p class="alert"><%= alert %></p>
- 
-<%= render "shared/nav" %>
 
 
   <% if current_user.is_a?(User) %>
@@ -24,12 +22,14 @@
 	<%= link_to "Sign_Up", new_user_registration_path %>
     <%= link_to "Login", new_user_session_path %>
   <% end %> 
-
+    
     <%= yield %>
-  
+   
+  <%= render "shared/nav" %>
+   
+
    <% if session[:source] %>
    <p>Thanks for visting me from <%= session[:source] %><p>
-    
     <% end %>
   </body>
 </html>
