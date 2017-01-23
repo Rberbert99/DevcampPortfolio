@@ -1,4 +1,3 @@
- module DeviseWhitelist
- 	
-  
+module DeviseWhitelist
+	extend ActiveSupport::Concern
 end

@@ -1,6 +1,8 @@
  class BlogsController < ApplicationController
   before_action :set_blog, only: [:show, :edit, :update, :destroy, :toggle_status]
   layout "blog"
+  access all: [:show, :index], user: {except: [:destroy, :new, :create, :update, :edit]}, site_admin: :all
+
   # GET /blogs
   # GET /blogs.json
   def index
@@ -64,20 +66,14 @@
     end
   end
 
-def toggle_status
-   
-   if @blog.draft?
+  def toggle_status
+    if @blog.draft?
       @blog.published!
     elsif @blog.published?
       @blog.draft!
-
-end
-
+    end
       redirect_to blogs_url, notice: 'Post status has been updated'
-
-
-end
-
+  end
 
 
   private
