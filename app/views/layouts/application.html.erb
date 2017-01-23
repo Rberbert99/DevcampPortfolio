@@ -30,6 +30,8 @@
   <% end %> 
 
     <%= yield %>
+
+    <%=@copyright%>
   
    <% if session[:source] %>
    <p>Thanks for visting me from <%= session[:source] %><p>
