@@ -16,7 +16,7 @@ module ApplicationHelper
 			content_tag(:p, greeting, class: "source_greeting")
 		end
 	end
-	def copyright_generator('')
-	  RexViewTool::Renderer.copyright 'Rex Berbert'. 'All rights reserved'
+	def copyright_generator
+	  RexViewTool::Renderer.copyright 'Rex Berbert', 'All rights reserved'
 	end
 end
