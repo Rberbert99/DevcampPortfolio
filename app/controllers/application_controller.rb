@@ -2,6 +2,6 @@ class ApplicationController < ActionController::Base
 	protect_from_forgery with: :exception
 	include DeviseWhitelist
     include SetSource
-    include DefaultPageContent
     include CurrentUserConcern
+    include DefaultPageContent
 end
