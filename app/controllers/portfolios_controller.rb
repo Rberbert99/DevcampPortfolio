@@ -23,9 +23,8 @@ class PortfoliosController < ApplicationController
 
   def create
     @portfolio_item = Portfolio.new(portfolio_params)
-    
     if @portfolio_item.save
-      redirect_to @portfolio_item
+      redirect_to show_portfolio_path(@portfolio_item)
     else
       render :new
     end
@@ -42,7 +41,7 @@ class PortfoliosController < ApplicationController
   def update
     @portfolio_item = Portfolio.find(params[:id])
     if @portfolio_item.update(portfolio_params)
-      redirect_to @portfolio_item
+      redirect_to show_portfolio_path(@portfolio_item)
     else
       render :edit 
     end

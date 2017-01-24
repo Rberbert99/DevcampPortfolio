@@ -30,7 +30,7 @@ gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.5'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 3.0'
-gem 'friendly_id', '~> 5.1.0'
+
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
@@ -54,7 +54,13 @@ end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
-gem 'devise'
+
+gem 'friendly_id', :require => "friendly_id"
+
+gem 'devise', '~> 4.2'
+
 gem 'bootstrap', '~> 4.0.0.alpha6'
+
 gem 'rex_view_tool', '~> 0.1.0'
+
 gem 'petergate', '~> 1.7'
