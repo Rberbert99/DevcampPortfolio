@@ -1,20 +1,27 @@
-<h1>Portfolio Show</h1>
+div class="container">
+	<div class="row">
+		<div class="col-md-7">
+			<%= image_tag @portfolio_item.main_image %>
+		</div>
 
-<p><%= @portfolio_item.title %></p>
-<p><%= @portfolio_item.subtitle %></p>
-<P><%= @portfolio_item.body %></p>
-<P><%= image_tag @portfolio_item.main_image unless @portfolio_item.thumb_image.nil? %> </p>
-
-<H3>Technologies Used:</H3>
-<% @portfolio_item.technologies.each do |t| %>
-  <p><%= t.name %></p>
+		<div class="col-md-5">
 
 
+		<h1><%= @portfolio_item.title %></h1>
 
+			<hr>
 
-<%= link_to 'Back', portfolios_path %>
-<%= link_to 'Edit', edit_portfolio_path(@portfolio_item) %>
-<%= link_to 'Delete', portfolio_path(@portfolio_item), method: :delete %>
+		<em><%= @portfolio_item.subtitle %></em>
 
-<% end %>
+		<p><%= @portfolio_item.body %></p>
 
+			<hr>
+
+		<h3>Technologies Used:</h3>
+
+		<% @portfolio_item.technologies.each do |t| %>
+		<p><%= t.name %></p>
+		<% end %>
+	</div>
+  </div>
+</div>
