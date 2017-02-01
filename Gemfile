@@ -79,7 +79,7 @@ gem 'mini_magick', '~> 4.6'
 
 gem 'dotenv-rails', '~> 2.2'
 
-
+gem 'cocoon', '~> 1.2', '>= 1.2.9'
 
 
 
